@@ -6,6 +6,18 @@ const uiError = document.querySelector("#form-error");
 
 uiForm.addEventListener("submit", (e) => formSubmit(e));
 
+const uiMenuBtn = document.getElementById("menu-btn");
+const uiMenu = document.getElementById("menu");
+
+uiMenuBtn.addEventListener("click", navToggle);
+
+// Toggle Mobile Menu
+function navToggle() {
+  uiMenuBtn.classList.toggle("open");
+  uiMenu.classList.toggle("flex");
+  uiMenu.classList.toggle("hidden");
+}
+
 // Validate a URL
 function validURL(str) {
   var pattern = new RegExp(
